@@ -1,0 +1,195 @@
+<!--Copyright to Shen Huang, you can reach me out at shenhuang@live.ca-->
+
+<!DOCTYPE html>
+<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+<html>
+	<head>
+	<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="favicon.jpg">
+		<title>#13</title>
+		<style>
+		body	{
+			background-color : #000000;
+		}
+		@keyframes heartfade {
+			0% {
+				opacity : 1;
+			}
+			50% {
+				opacity : 0;
+			}
+		}
+		.heart {
+			z-index : 999;
+			animation : heartfade 3s linear;
+			position : absolute; 
+		}
+		.heart:before,
+		.heart:after {
+			content : "";
+			background-color : #690000;
+			position : absolute;
+			height : 30px;
+			width : 45px;
+			border-radius : 15px 0px 0px 15px;
+		}
+		.heart:before {
+			transform : rotate(45deg);
+		}
+
+		.heart:after {
+			left : 10.5px;
+			transform : rotate(135deg);
+		}
+		h1, h5{
+			color: white;
+		}
+		.d{
+			position: absolute;
+			top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+			font-size: 27px;
+		}
+		img{
+		border-radius : 50%;
+		}
+		.typewriter{
+			color: white;
+			margin-top: 530px;
+			font-size: 20px;
+		}
+		</style>
+		<script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/creative.min.js"></script>
+    <script src="js/script.js"></script>
+	</head>
+	<body>
+		<div class="d" align='center'>
+			<p>
+				<h1>Feliz primer mes juntos amor</h1>
+			</p>
+			<img src="2.jpeg" width="150" height="150">
+			<img src="1.jpeg" width="150" height="150">
+			<img src="3.jpeg" width="150" height="150">
+			<img src="14.jpg" width="150" height="150">
+		</div>
+		<div align='center' class="txt-rotate typewriter" data-period="2000" data-rotate='[ "Buenos días mi amor!!!", "hoy quiero agradecerte", "por ese tiempo que hemos compartido juntos", 
+		"es el inicio de una historia maravillosa", "espero siempre estar a tu lado y poder apoyarte", "que de la mano de Dios logremos cosas increibles", "Gracias mi amor!!!", "Feliz primer mes juntos amor!!!" ]'>
+ 
+	</body>
+	<script>
+
+		var brd = document.createElement("DIV");
+		document.body.insertBefore(brd, document.getElementById("board"));
+
+		const duration = 6000;
+		const speed = 0.5;
+		const cursorXOffset = 0;
+		const cursorYOffset = -5;
+
+		var hearts = [];
+		
+		function generateHeart(x, y, xBound, xStart, scale)
+		{
+			var heart = document.createElement("DIV");
+			heart.setAttribute('class', 'heart');
+			brd.appendChild(heart);
+			heart.time = duration;
+			heart.x = x;
+			heart.y = y;
+			heart.bound = xBound;
+			heart.direction = xStart;
+			heart.style.left = heart.x + "px";
+			heart.style.top = heart.y + "px";
+			heart.scale = scale;
+			heart.style.transform = "scale(" + scale + "," + scale + ")";
+			if(hearts == null)
+				hearts = [];
+			hearts.push(heart);
+			return heart;
+		}
+
+		var down = false;
+		var event = null;
+
+		document.onmousedown = function(e) {
+			down = true;
+			event = e;
+		}
+
+		document.onmouseup = function(e) {
+			down = false;
+		}
+
+		document.onmousemove = function(e) {
+			event = e;
+		}
+
+		document.ontouchstart = function(e) {
+			down = true;
+			event = e.touches[0];
+		}
+
+		document.ontouchend = function(e) {
+			down = false;
+		}
+
+		document.ontouchmove = function(e) {
+			event = e.touches[0];
+		}
+
+		var before = Date.now();
+		var id = setInterval(frame, 5);
+		var gr = setInterval(check, 500);
+
+		function frame()
+		{
+			var current = Date.now();
+			var deltaTime = current - before;
+			before = current;
+			for(i in hearts)
+			{
+				var heart = hearts[i];
+				heart.time -= deltaTime;
+				if(heart.time > 0)
+				{
+					heart.y -= speed;
+					heart.style.top = heart.y + "px";
+					heart.style.left = heart.x + heart.direction * heart.bound * Math.sin(heart.y * heart.scale / 30) / heart.y * 100 + "px";
+				}
+				else
+				{
+					heart.parentNode.removeChild(heart);
+					hearts.splice(i, 1);
+				}
+			}
+		}
+
+		function check()
+		{
+				var start = 1 - Math.round(Math.random()) * 2;
+				var scale = Math.random() * Math.random() * 0.8 + 0.2;
+				var bound = 30 + Math.random() * 20;
+				generateHeart(100, 500, bound, start, scale);
+				generateHeart(150, 550, bound, start, scale);
+				generateHeart(200, 580, bound, start, scale);
+				
+				generateHeart(1100, 580, bound, start, scale);
+				generateHeart(1150, 550, bound, start, scale);
+				generateHeart(1200, 500, bound, start, scale);
+				
+		}
+
+	</script>
+</html>
