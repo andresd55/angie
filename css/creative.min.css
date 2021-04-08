@@ -124,7 +124,7 @@ aside {
 .navbar-default .navbar-header .navbar-brand {
     color: white;
     text-shadow: 2px 2px 8px red;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase
 }
 
@@ -277,12 +277,14 @@ header .header-content .header-content-inner p {
 
 .service-box {
     max-width: 400px;
-    margin: 50px auto 0
+    margin: 50px auto 0;
+    cursor: pointer;
 }
 
 @media (min-width:992px) {
     .service-box {
-        margin: 20px auto 0
+        margin: 20px auto 0;
+        cursor: pointer;
     }
 }
 

@@ -1,6 +1,48 @@
 $(function() {
     $(".info-left").animate({ "left": "+=200px" }, "slow");
     $(".info-right").animate({ "right": "+=200px" }, "slow");
+    $(".service-box").on('click', function(e) {
+        let src = $($(event.target)[0]).attr('src');
+        $('#imgG').attr('src', src);
+        if (src.includes('1.jpg')) {
+            $('#exampleModalLabel').text('Me encanta abrazarte!!! :D');
+        }
+        if (src.includes('2.jpg')) {
+            $('#exampleModalLabel').text('Nuestra mejor foto ;)');
+        }
+        if (src.includes('15.jpg')) {
+            $('#exampleModalLabel').text('Nos vemos sexys ;) ;) ;)');
+        } else {
+            if (src.includes('5.jpg')) {
+                $('#exampleModalLabel').text('Mi mirada expresa los planes que tengo contigo... ∞');
+            }
+        }
+        if (src.includes('4.jpg')) {
+            $('#exampleModalLabel').text('Simbolo de nuestro primer mes y el comienzo de la mejor historia de amor <3');
+        }
+
+        if (src.includes('6.jpg')) {
+            $('#exampleModalLabel').text('Primero de muchos viajes juntos... :D');
+        }
+        if (src.includes('7.jpg')) {
+            $('#exampleModalLabel').text('Juntos comenzando un nuevo camino... <3');
+        }
+        if (src.includes('8.jpeg')) {
+            $('#exampleModalLabel').text('El mejor día de mi vida... 13/02/2021');
+        }
+        if (src.includes('9.jpeg')) {
+            $('#exampleModalLabel').text('Nuestra primera cita... estabas muy hermosa como siempre <3 <3');
+        }
+        if (src.includes('10.jpeg')) {
+            $('#exampleModalLabel').text('Un brindis por todo lo que viene... :*');
+        }
+        if (src.includes('11.jpg')) {
+            $('#exampleModalLabel').text('Nos vemos tiernitos... :D');
+        }
+        if (src.includes('12.jpg')) {
+            $('#exampleModalLabel').text('Tus besos son lo mejor!!! :* :* :*');
+        }
+    });
 });
 $(".social-icon").hover(function() {
     $(this).addClass('animated bounce');
@@ -60,7 +102,7 @@ window.onload = function() {
     // INJECT CSS
     var css = document.createElement("style");
     css.type = "text/css";
-    css.innerHTML = ".txt-rotate > .wrap { border-right: .15em solid orange; }";
+    css.innerHTML = ".txt-rotate > .wrap { border-right: .15em solid #690000; }";
     document.body.appendChild(css);
 
     var start = 1 - Math.round(Math.random()) * 2;
