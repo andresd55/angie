@@ -1,65 +1,536 @@
-<!--Copyright to Shen Huang, you can reach me out at shenhuang@live.ca-->
-
 <!DOCTYPE html>
-<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
-<html>
-	<head>
-<link rel="icon" type="image/png" href="favicon.jpg">
-		<title>#13</title>
-		<style>
-		body	{
-			background-color : #000000;
-		}
-		@keyframes heartfade {
-			0% {
-				opacity : 1;
-			}
-			50% {
-				opacity : 0;
-			}
-		}
-		.heart {
-			z-index : 999;
-			animation : heartfade 3s linear;
-			position : absolute; 
-		}
-		.heart:before,
-		.heart:after {
-			content : "";
-			background-color : #690000;
-			position : absolute;
-			height : 30px;
-			width : 45px;
-			border-radius : 15px 0px 0px 15px;
-		}
-		.heart:before {
-			transform : rotate(45deg);
-		}
+<html lang="en">
 
-		.heart:after {
-			left : 10.5px;
-			transform : rotate(135deg);
-		}
-		h1, h5{
-			color: white;
-		}
-		.d{
-			position: absolute;
-			top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-			font-size: 30px;
-		}
-		img{
-		border-radius : 50%;
-		}
-		.typewriter{
-			color: white;
-			margin-top: 230px;
-			font-size: 40px;
-		}
-		</style>
-		<script src="vendor/jquery/jquery.min.js"></script>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>13-02-2021</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/creative.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+            </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Nuestra Historia de amor</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#about">Palabras</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Momentos</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Gracias</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <header>
+        <div class="header-content">
+            <div id='stars'></div>
+            <div id='stars2'></div>
+            <div id='stars3'></div>
+            <div id='stars4'></div>
+            <div id='stars5'></div>
+            <div id='stars' style="margin-left: 5%;"></div>
+            <div id='stars2' style="margin-left: 5%;"></div>
+            <div id='stars3' style="margin-left: 5%;"></div>
+            <div id='stars4' style="margin-left: 5%;"></div>
+            <div id='stars6' style="margin-left: 5%;"></div>
+            <div id='stars' style="margin-left: 10%;"></div>
+            <div id='stars2' style="margin-left: 10%;"></div>
+            <div id='stars3' style="margin-left: 10%;"></div>
+            <div id='stars4' style="margin-left: 10%;"></div>
+            <div id='stars5' style="margin-left: 10%;"></div>
+            <div id='stars' style="margin-left: 15%;"></div>
+            <div id='stars2' style="margin-left: 15%;"></div>
+            <div id='stars3' style="margin-left: 15%;"></div>
+            <div id='stars4' style="margin-left: 15%;"></div>
+            <div id='stars' style="margin-left: 20%;"></div>
+            <div id='stars2' style="margin-left: 20%;"></div>
+            <div id='stars3' style="margin-left: 20%;"></div>
+            <div id='stars4' style="margin-left: 20%;"></div>
+            <div id='stars5' style="margin-left: 20%;"></div>
+            <div id='stars6' style="margin-left: 20%;"></div>
+            <div id='stars' style="margin-left: 25%;"></div>
+            <div id='stars2' style="margin-left: 25%;"></div>
+            <div id='stars3' style="margin-left: 25%;"></div>
+            <div id='stars4' style="margin-left: 25%;"></div>
+            <div id='stars' style="margin-left: 30%;"></div>
+            <div id='stars2' style="margin-left: 30%;"></div>
+            <div id='stars3' style="margin-left: 30%;"></div>
+            <div id='stars4' style="margin-left: 30%;"></div>
+            <div id='stars5' style="margin-left: 30%;"></div>
+            <div id='stars' style="margin-left: 35%;"></div>
+            <div id='stars2' style="margin-left: 35%;"></div>
+            <div id='stars3' style="margin-left: 35%;"></div>
+            <div id='stars4' style="margin-left: 35%;"></div>
+            <div id='stars6' style="margin-left: 35%;"></div>
+            <div id='stars' style="margin-left: 40%;"></div>
+            <div id='stars2' style="margin-left: 40%;"></div>
+            <div id='stars3' style="margin-left: 40%;"></div>
+            <div id='stars4' style="margin-left: 40%;"></div>
+            <div id='stars5' style="margin-left: 40%;"></div>
+            <div id='stars' style="margin-left: -5%;"></div>
+            <div id='stars2' style="margin-left: -5%;"></div>
+            <div id='stars3' style="margin-left: -5%;"></div>
+            <div id='stars4' style="margin-left: -5%;"></div>
+            <div id='stars' style="margin-left: -10%;"></div>
+            <div id='stars2' style="margin-left: -10%;"></div>
+            <div id='stars3' style="margin-left: -10%;"></div>
+            <div id='stars4' style="margin-left: -10%;"></div>
+            <div id='stars5' style="margin-left: -10%;"></div>
+            <div id='stars6' style="margin-left: -10%;"></div>
+            <div id='stars' style="margin-left: -15%;"></div>
+            <div id='stars2' style="margin-left: -15%;"></div>
+            <div id='stars3' style="margin-left: -15%;"></div>
+            <div id='stars4' style="margin-left: -15%;"></div>
+            <div id='stars' style="margin-left: -20%;"></div>
+            <div id='stars2' style="margin-left: -20%;"></div>
+            <div id='stars3' style="margin-left: -20%;"></div>
+            <div id='stars4' style="margin-left: -20%;"></div>
+            <div id='stars5' style="margin-left: -20%;"></div>
+            <div id='stars' style="margin-left: -25%;"></div>
+            <div id='stars2' style="margin-left: -25%;"></div>
+            <div id='stars3' style="margin-left: -25%;"></div>
+            <div id='stars4' style="margin-left: -25%;"></div>
+            <div id='stars6' style="margin-left: -25%;"></div>
+            <div id='stars' style="margin-left: -30%;"></div>
+            <div id='stars2' style="margin-left: -30%;"></div>
+            <div id='stars3' style="margin-left: -30%;"></div>
+            <div id='stars4' style="margin-left: -30%;"></div>
+            <div id='stars5' style="margin-left: -30%;"></div>
+            <div id='stars' style="margin-left: -35%;"></div>
+            <div id='stars2' style="margin-left: -35%;"></div>
+            <div id='stars3' style="margin-left: -35%;"></div>
+            <div id='stars4' style="margin-left: -35%;"></div>
+            <div id='stars' style="margin-left: -40%;"></div>
+            <div id='stars2' style="margin-left: -40%;"></div>
+            <div id='stars3' style="margin-left: -40%;"></div>
+            <div id='stars4' style="margin-left: -40%;"></div>
+            <div id='stars5' style="margin-left: -40%;"></div>
+            <div id='stars6' style="margin-left: -40%;"></div>
+            <div class="row row-box-info">
+                <div class="col-md-12 box-info background">
+                    <img class="img-circle img-photo" alt="" src="img/pi.jpg">
+                    <img class="img-circle img-photo" alt="" src="img/bu.jpg">
+                    <div class="row social-bar">
+                        <div class="txt-rotate typewriter" data-period="2000" data-rotate='[ "Hola mi amor…", "Quiero decirte que te amoooo!!!",
+                        "Que a tu lado soy muy feliz", "Que me encantas", "Eres lo más hermoso del mundo", "13/02/2021 - ∞" ]'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div id='stars'></div>
+            <div id='stars2'></div>
+            <div id='stars3'></div>
+            <div id='stars4'></div>
+            <div id='stars5'></div>
+            <div id='stars' style="margin-left: 5%;"></div>
+            <div id='stars2' style="margin-left: 5%;"></div>
+            <div id='stars3' style="margin-left: 5%;"></div>
+            <div id='stars4' style="margin-left: 5%;"></div>
+            <div id='stars6' style="margin-left: 5%;"></div>
+            <div id='stars' style="margin-left: 10%;"></div>
+            <div id='stars2' style="margin-left: 10%;"></div>
+            <div id='stars3' style="margin-left: 10%;"></div>
+            <div id='stars4' style="margin-left: 10%;"></div>
+            <div id='stars5' style="margin-left: 10%;"></div>
+            <div id='stars' style="margin-left: 15%;"></div>
+            <div id='stars2' style="margin-left: 15%;"></div>
+            <div id='stars3' style="margin-left: 15%;"></div>
+            <div id='stars4' style="margin-left: 15%;"></div>
+            <div id='stars' style="margin-left: 20%;"></div>
+            <div id='stars2' style="margin-left: 20%;"></div>
+            <div id='stars3' style="margin-left: 20%;"></div>
+            <div id='stars4' style="margin-left: 20%;"></div>
+            <div id='stars5' style="margin-left: 20%;"></div>
+            <div id='stars6' style="margin-left: 20%;"></div>
+            <div id='stars' style="margin-left: 25%;"></div>
+            <div id='stars2' style="margin-left: 25%;"></div>
+            <div id='stars3' style="margin-left: 25%;"></div>
+            <div id='stars4' style="margin-left: 25%;"></div>
+            <div id='stars' style="margin-left: 30%;"></div>
+            <div id='stars2' style="margin-left: 30%;"></div>
+            <div id='stars3' style="margin-left: 30%;"></div>
+            <div id='stars4' style="margin-left: 30%;"></div>
+            <div id='stars5' style="margin-left: 30%;"></div>
+            <div id='stars' style="margin-left: 35%;"></div>
+            <div id='stars2' style="margin-left: 35%;"></div>
+            <div id='stars3' style="margin-left: 35%;"></div>
+            <div id='stars4' style="margin-left: 35%;"></div>
+            <div id='stars6' style="margin-left: 35%;"></div>
+            <div id='stars' style="margin-left: 40%;"></div>
+            <div id='stars2' style="margin-left: 40%;"></div>
+            <div id='stars3' style="margin-left: 40%;"></div>
+            <div id='stars4' style="margin-left: 40%;"></div>
+            <div id='stars5' style="margin-left: 40%;"></div>
+            <div id='stars' style="margin-left: 45%;"></div>
+            <div id='stars2' style="margin-left: 45%;"></div>
+            <div id='stars3' style="margin-left: 45%;"></div>
+            <div id='stars4' style="margin-left: 45%;"></div>
+            <div id='stars' style="margin-left: 50%;"></div>
+            <div id='stars2' style="margin-left: 50%;"></div>
+            <div id='stars3' style="margin-left: 50%;"></div>
+            <div id='stars4' style="margin-left: 50%;"></div>
+            <div id='stars5' style="margin-left: 50%;"></div>
+            <div id='stars6' style="margin-left: 50%;"></div>
+            <div id='stars' style="margin-left: 55%;"></div>
+            <div id='stars2' style="margin-left: 55%;"></div>
+            <div id='stars3' style="margin-left: 55%;"></div>
+            <div id='stars4' style="margin-left: 55%;"></div>
+            <div id='stars' style="margin-left: 60%;"></div>
+            <div id='stars2' style="margin-left: 60%;"></div>
+            <div id='stars3' style="margin-left: 60%;"></div>
+            <div id='stars4' style="margin-left: 60%;"></div>
+            <div id='stars5' style="margin-left: 60%;"></div>
+            <div id='stars' style="margin-left: 65%;"></div>
+            <div id='stars2' style="margin-left: 65%;"></div>
+            <div id='stars3' style="margin-left: 65%;"></div>
+            <div id='stars4' style="margin-left: 65%;"></div>
+            <div id='stars6' style="margin-left: 65%;"></div>
+            <div id='stars' style="margin-left: 70%;"></div>
+            <div id='stars2' style="margin-left: 70%;"></div>
+            <div id='stars3' style="margin-left: 70%;"></div>
+            <div id='stars4' style="margin-left: 70%;"></div>
+            <div id='stars5' style="margin-left: 70%;"></div>
+            <div id='stars' style="margin-left: 75%;"></div>
+            <div id='stars2' style="margin-left: 75%;"></div>
+            <div id='stars3' style="margin-left: 75%;"></div>
+            <div id='stars4' style="margin-left: 75%;"></div>
+            <div id='stars' style="margin-left: 80%;"></div>
+            <div id='stars2' style="margin-left: 80%;"></div>
+            <div id='stars3' style="margin-left: 80%;"></div>
+            <div id='stars4' style="margin-left: 80%;"></div>
+            <div id='stars5' style="margin-left: 80%;"></div>
+            <div id='stars6' style="margin-left: 80%;"></div>
+            <div class="row box-info">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h3 style="margin-top: 23px;" class="section-heading">¡Para la mujer más hermosa!!!</h3>
+                    <hr class="light">
+                    <p class="text-faded">
+                        Desde el primer día junto a ti ha sido maravilloso cada momento compartido, aprecio todo lo que has hecho por mí, me pareces una persona maravillosa y agradezco a Dios y a la vida por ponerte en mi camino, siempre he tenido las mejores intenciones contigo,
+                        espero poder hacerte muy feliz cada día, que luchemos juntos por lograr grandes cosas me siento el hombre más afortunado del mundo al estar contigo me lleno de mucho orgullo de saber que encontré a una persona maravillosa, sé que
+                        juntos vamos a seguir construyendo la mejor historia de amor, te amo mi amor y eres mi mejor inspiración siempre estás en mi mente y mi corazón, haces que mis días sean más bonitos pensando en ti, eres y serás siempre la dueña
+                        de mi corazón.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" style="color:white;">
+        <div id='stars' style="margin-left: 10%;"></div>
+        <div id='stars2' style="margin-left: 10%;"></div>
+        <div id='stars3' style="margin-left: 10%;"></div>
+        <div id='stars4' style="margin-left: 10%;"></div>
+        <div id='stars5' style="margin-left: 10%;"></div>
+        <div id='stars6' style="margin-left: 10%;"></div>
+        <div id='stars' style="margin-left: 15%;"></div>
+        <div id='stars2' style="margin-left: 15%;"></div>
+        <div id='stars3' style="margin-left: 15%;"></div>
+        <div id='stars4' style="margin-left: 15%;"></div>
+        <div id='stars' style="margin-left: 20%;"></div>
+        <div id='stars2' style="margin-left: 20%;"></div>
+        <div id='stars3' style="margin-left: 20%;"></div>
+        <div id='stars4' style="margin-left: 20%;"></div>
+        <div id='stars5' style="margin-left: 20%;"></div>
+        <div id='stars' style="margin-left: 25%;"></div>
+        <div id='stars2' style="margin-left: 25%;"></div>
+        <div id='stars3' style="margin-left: 25%;"></div>
+        <div id='stars4' style="margin-left: 25%;"></div>
+        <div id='stars6' style="margin-left: 25%;"></div>
+        <div id='stars' style="margin-left: 30%;"></div>
+        <div id='stars2' style="margin-left: 30%;"></div>
+        <div id='stars3' style="margin-left: 30%;"></div>
+        <div id='stars4' style="margin-left: 30%;"></div>
+        <div id='stars5' style="margin-left: 30%;"></div>
+        <div id='stars' style="margin-left: 35%;"></div>
+        <div id='stars2' style="margin-left: 35%;"></div>
+        <div id='stars3' style="margin-left: 35%;"></div>
+        <div id='stars4' style="margin-left: 35%;"></div>
+        <div id='stars' style="margin-left: 40%;"></div>
+        <div id='stars2' style="margin-left: 40%;"></div>
+        <div id='stars3' style="margin-left: 40%;"></div>
+        <div id='stars4' style="margin-left: 40%;"></div>
+        <div id='stars5' style="margin-left: 40%;"></div>
+        <div id='stars6' style="margin-left: 40%;"></div>
+        <div id='stars' style="margin-left: 45%;"></div>
+        <div id='stars2' style="margin-left: 45%;"></div>
+        <div id='stars3' style="margin-left: 45%;"></div>
+        <div id='stars4' style="margin-left: 45%;"></div>
+        <div id='stars' style="margin-left: 50%;"></div>
+        <div id='stars2' style="margin-left: 50%;"></div>
+        <div id='stars3' style="margin-left: 50%;"></div>
+        <div id='stars4' style="margin-left: 50%;"></div>
+        <div id='stars5' style="margin-left: 50%;"></div>
+        <div id='stars' style="margin-left: 55%;"></div>
+        <div id='stars2' style="margin-left: 55%;"></div>
+        <div id='stars3' style="margin-left: 55%;"></div>
+        <div id='stars4' style="margin-left: 55%;"></div>
+        <div id='stars6' style="margin-left: 55%;"></div>
+        <div id='stars' style="margin-left: 60%;"></div>
+        <div id='stars2' style="margin-left: 60%;"></div>
+        <div id='stars3' style="margin-left: 60%;"></div>
+        <div id='stars4' style="margin-left: 60%;"></div>
+        <div id='stars5' style="margin-left: 60%;"></div>
+        <div id='stars' style="margin-left: 65%;"></div>
+        <div id='stars2' style="margin-left: 65%;"></div>
+        <div id='stars3' style="margin-left: 65%;"></div>
+        <div id='stars4' style="margin-left: 65%;"></div>
+        <div id='stars' style="margin-left: 70%;"></div>
+        <div id='stars2' style="margin-left: 70%;"></div>
+        <div id='stars3' style="margin-left: 70%;"></div>
+        <div id='stars4' style="margin-left: 70%;"></div>
+        <div id='stars5' style="margin-left: 70%;"></div>
+        <div id='stars6' style="margin-left: 70%;"></div>
+        <div id='stars' style="margin-left: 75%;"></div>
+        <div id='stars2' style="margin-left: 75%;"></div>
+        <div id='stars3' style="margin-left: 75%;"></div>
+        <div id='stars4' style="margin-left: 75%;"></div>
+        <div id='stars' style="margin-left: 80%;"></div>
+        <div id='stars2' style="margin-left: 80%;"></div>
+        <div id='stars3' style="margin-left: 80%;"></div>
+        <div id='stars4' style="margin-left: 80%;"></div>
+        <div id='stars5' style="margin-left: 80%;"></div>
+        <div id='stars' style="margin-left: 85%;"></div>
+        <div id='stars2' style="margin-left: 85%;"></div>
+        <div id='stars3' style="margin-left: 85%;"></div>
+        <div id='stars4' style="margin-left: 85%;"></div>
+        <div id='stars6' style="margin-left: 85%;"></div>
+        <div id='stars' style="margin-left: 90%;"></div>
+        <div id='stars2' style="margin-left: 90%;"></div>
+        <div id='stars3' style="margin-left: 90%;"></div>
+        <div id='stars4' style="margin-left: 90%;"></div>
+        <div id='stars5' style="margin-left: 90%;"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Bellos Momentos...</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+                    <div class="service-box">
+                        <img src="img/momentos/1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+                    <div class="service-box">
+                        <img src="img/momentos/2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+                    <div class="service-box">
+                        <img src="img/momentos/15.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+                    <div class="service-box">
+                        <img src="img/momentos/4.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+                    <div class="service-box">
+                        <img src="img/momentos/5.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+                    <div class="service-box">
+                        <img src="img/momentos/6.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+                    <div class="service-box">
+                        <img src="img/momentos/7.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+                    <div class="service-box">
+                        <img src="img/momentos/8.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+                    <div class="service-box">
+                        <img src="img/momentos/9.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+                    <div class="service-box">
+                        <img src="img/momentos/10.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+                    <div class="service-box">
+                        <img src="img/momentos/11.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+                    <div class="service-box">
+                        <img src="img/momentos/12.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div id='stars' style="margin-left: 10%;"></div>
+        <div id='stars2' style="margin-left: 10%;"></div>
+        <div id='stars3' style="margin-left: 10%;"></div>
+        <div id='stars4' style="margin-left: 10%;"></div>
+        <div id='stars5' style="margin-left: 10%;"></div>
+        <div id='stars6' style="margin-left: 10%;"></div>
+        <div id='stars' style="margin-left: 15%;"></div>
+        <div id='stars2' style="margin-left: 15%;"></div>
+        <div id='stars3' style="margin-left: 15%;"></div>
+        <div id='stars4' style="margin-left: 15%;"></div>
+        <div id='stars' style="margin-left: 20%;"></div>
+        <div id='stars2' style="margin-left: 20%;"></div>
+        <div id='stars3' style="margin-left: 20%;"></div>
+        <div id='stars4' style="margin-left: 20%;"></div>
+        <div id='stars5' style="margin-left: 20%;"></div>
+        <div id='stars' style="margin-left: 25%;"></div>
+        <div id='stars2' style="margin-left: 25%;"></div>
+        <div id='stars3' style="margin-left: 25%;"></div>
+        <div id='stars4' style="margin-left: 25%;"></div>
+        <div id='stars6' style="margin-left: 25%;"></div>
+        <div id='stars' style="margin-left: 30%;"></div>
+        <div id='stars2' style="margin-left: 30%;"></div>
+        <div id='stars3' style="margin-left: 30%;"></div>
+        <div id='stars4' style="margin-left: 30%;"></div>
+        <div id='stars5' style="margin-left: 30%;"></div>
+        <div id='stars' style="margin-left: 35%;"></div>
+        <div id='stars2' style="margin-left: 35%;"></div>
+        <div id='stars3' style="margin-left: 35%;"></div>
+        <div id='stars4' style="margin-left: 35%;"></div>
+        <div id='stars' style="margin-left: 40%;"></div>
+        <div id='stars2' style="margin-left: 40%;"></div>
+        <div id='stars3' style="margin-left: 40%;"></div>
+        <div id='stars4' style="margin-left: 40%;"></div>
+        <div id='stars5' style="margin-left: 40%;"></div>
+        <div id='stars6' style="margin-left: 40%;"></div>
+        <div id='stars' style="margin-left: 45%;"></div>
+        <div id='stars2' style="margin-left: 45%;"></div>
+        <div id='stars3' style="margin-left: 45%;"></div>
+        <div id='stars4' style="margin-left: 45%;"></div>
+        <div id='stars' style="margin-left: 50%;"></div>
+        <div id='stars2' style="margin-left: 50%;"></div>
+        <div id='stars3' style="margin-left: 50%;"></div>
+        <div id='stars4' style="margin-left: 50%;"></div>
+        <div id='stars5' style="margin-left: 50%;"></div>
+        <div id='stars' style="margin-left: 55%;"></div>
+        <div id='stars2' style="margin-left: 55%;"></div>
+        <div id='stars3' style="margin-left: 55%;"></div>
+        <div id='stars4' style="margin-left: 55%;"></div>
+        <div id='stars6' style="margin-left: 55%;"></div>
+        <div id='stars' style="margin-left: 60%;"></div>
+        <div id='stars2' style="margin-left: 60%;"></div>
+        <div id='stars3' style="margin-left: 60%;"></div>
+        <div id='stars4' style="margin-left: 60%;"></div>
+        <div id='stars5' style="margin-left: 60%;"></div>
+        <div id='stars' style="margin-left: 65%;"></div>
+        <div id='stars2' style="margin-left: 65%;"></div>
+        <div id='stars3' style="margin-left: 65%;"></div>
+        <div id='stars4' style="margin-left: 65%;"></div>
+        <div id='stars' style="margin-left: 70%;"></div>
+        <div id='stars2' style="margin-left: 70%;"></div>
+        <div id='stars3' style="margin-left: 70%;"></div>
+        <div id='stars4' style="margin-left: 70%;"></div>
+        <div id='stars5' style="margin-left: 70%;"></div>
+        <div id='stars6' style="margin-left: 70%;"></div>
+        <div id='stars' style="margin-left: 75%;"></div>
+        <div id='stars2' style="margin-left: 75%;"></div>
+        <div id='stars3' style="margin-left: 75%;"></div>
+        <div id='stars4' style="margin-left: 75%;"></div>
+        <div id='stars' style="margin-left: 80%;"></div>
+        <div id='stars2' style="margin-left: 80%;"></div>
+        <div id='stars3' style="margin-left: 80%;"></div>
+        <div id='stars4' style="margin-left: 80%;"></div>
+        <div id='stars5' style="margin-left: 80%;"></div>
+        <div id='stars' style="margin-left: 85%;"></div>
+        <div id='stars2' style="margin-left: 85%;"></div>
+        <div id='stars3' style="margin-left: 85%;"></div>
+        <div id='stars4' style="margin-left: 85%;"></div>
+        <div id='stars6' style="margin-left: 85%;"></div>
+        <div id='stars' style="margin-left: 90%;"></div>
+        <div id='stars2' style="margin-left: 90%;"></div>
+        <div id='stars3' style="margin-left: 90%;"></div>
+        <div id='stars4' style="margin-left: 90%;"></div>
+        <div id='stars5' style="margin-left: 90%;"></div>
+        <div class="container box-info">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h3 style="margin-top: 23px;" class="section-heading">Gracias!!!</h3>
+                    <hr class="primary">
+                    <br>
+                    <p>Gracias mi amor por permitirme ser parte de tu vida!!</p>
+                    <br>
+                </div>
+
+            </div>
+
+            <div class="col-md-12">
+                <img class="img-circle img-photo2" style="margin-left: 18%; transform: rotate( 
+                    2deg
+                     );" alt="" src="img/momentos/13.jpg">
+                <img class="img-circle img-photo2" style="margin-left: 7%; transform: rotate(
+                    13deg
+                    );" alt="" src="img/momentos/14.jpg">
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -72,113 +543,7 @@
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
     <script src="js/script.js"></script>
-	</head>
-	<body>
-		<div align='center' class="txt-rotate typewriter" data-period="2000" data-rotate='[ "Hola mi amor ;)", "Queria decirte...", "Que te quiero demasiado", "y recordarte lo hermosa que eres", "me encantas" ]'>
- 
-	</body>
-	<script>
 
-		var brd = document.createElement("DIV");
-		document.body.insertBefore(brd, document.getElementById("board"));
+</body>
 
-		const duration = 6000;
-		const speed = 0.5;
-		const cursorXOffset = 0;
-		const cursorYOffset = -5;
-
-		var hearts = [];
-		
-		function generateHeart(x, y, xBound, xStart, scale)
-		{
-			var heart = document.createElement("DIV");
-			heart.setAttribute('class', 'heart');
-			brd.appendChild(heart);
-			heart.time = duration;
-			heart.x = x;
-			heart.y = y;
-			heart.bound = xBound;
-			heart.direction = xStart;
-			heart.style.left = heart.x + "px";
-			heart.style.top = heart.y + "px";
-			heart.scale = scale;
-			heart.style.transform = "scale(" + scale + "," + scale + ")";
-			if(hearts == null)
-				hearts = [];
-			hearts.push(heart);
-			return heart;
-		}
-
-		var down = false;
-		var event = null;
-
-		document.onmousedown = function(e) {
-			down = true;
-			event = e;
-		}
-
-		document.onmouseup = function(e) {
-			down = false;
-		}
-
-		document.onmousemove = function(e) {
-			event = e;
-		}
-
-		document.ontouchstart = function(e) {
-			down = true;
-			event = e.touches[0];
-		}
-
-		document.ontouchend = function(e) {
-			down = false;
-		}
-
-		document.ontouchmove = function(e) {
-			event = e.touches[0];
-		}
-
-		var before = Date.now();
-		var id = setInterval(frame, 5);
-		var gr = setInterval(check, 500);
-
-		function frame()
-		{
-			var current = Date.now();
-			var deltaTime = current - before;
-			before = current;
-			for(i in hearts)
-			{
-				var heart = hearts[i];
-				heart.time -= deltaTime;
-				if(heart.time > 0)
-				{
-					heart.y -= speed;
-					heart.style.top = heart.y + "px";
-					heart.style.left = heart.x + heart.direction * heart.bound * Math.sin(heart.y * heart.scale / 30) / heart.y * 100 + "px";
-				}
-				else
-				{
-					heart.parentNode.removeChild(heart);
-					hearts.splice(i, 1);
-				}
-			}
-		}
-
-		function check()
-		{
-				var start = 1 - Math.round(Math.random()) * 2;
-				var scale = Math.random() * Math.random() * 0.8 + 0.2;
-				var bound = 30 + Math.random() * 20;
-				generateHeart(100, 500, bound, start, scale);
-				generateHeart(150, 550, bound, start, scale);
-				generateHeart(200, 580, bound, start, scale);
-				
-				generateHeart(1100, 580, bound, start, scale);
-				generateHeart(1150, 550, bound, start, scale);
-				generateHeart(1200, 500, bound, start, scale);
-				
-		}
-
-	</script>
 </html>
